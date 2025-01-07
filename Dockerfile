@@ -8,7 +8,7 @@ RUN apt-get update && apt-get install -y curl
 WORKDIR /data
 
 # Download the OSM data
-RUN curl -o india-latest.osm.pbf https://download.geofabrik.de/asia/india-latest.osm.pbf
+RUN curl -o india-latest.osm.pbf https://download.geofabrik.de/asia/india/northern-zone-latest.osm.pbf
 
 # Process the map data
 RUN osrm-extract -p /opt/car.lua india-latest.osm.pbf \
