@@ -1,4 +1,4 @@
-FROM ghcr.io/project-osrm/osrm-backend:v5.24.0 as builder  # Use a specific version
+FROM ghcr.io/project-osrm/osrm-backend:latest as builder
 
 # Install curl
 RUN apt-get update && apt-get install -y curl
