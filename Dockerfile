@@ -11,3 +11,6 @@ RUN curl -o india-latest.osm.pbf https://download.geofabrik.de/asia/india-latest
 
 # Set the command to run when the container starts
 CMD ["osrm-routed", "--algorithm", "mld", "/data/india-latest.osrm"]
+
+# Expose the /data directory
+VOLUME ["/data"]
