@@ -10,6 +10,6 @@ WORKDIR /data
 RUN curl -o india-latest.osm.pbf https://download.geofabrik.de/asia/india-latest.osm.pbf
 
 # Ensure the data is processed
-RUN osrm-extract india-latest.osm.pbf
+RUN osrm-extract --profile car india-latest.osm.pbf  # Specify the profile
 RUN osrm-partition india-latest.osrm
 RUN osrm-customize india-latest.osrm
