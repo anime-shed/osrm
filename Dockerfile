@@ -1,4 +1,4 @@
-FROM ghcr.io/project-osrm/osrm-backend:latest as builder
+FROM ghcr.io/project-osrm/osrm-backend:v5.24.0 as builder  # Use a specific version
 
 # Install curl
 RUN apt-get update && apt-get install -y curl
@@ -9,7 +9,5 @@ WORKDIR /data
 # Download the OSM data
 RUN curl -o india-latest.osm.pbf https://download.geofabrik.de/asia/india-latest.osm.pbf
 
-# Ensure the data is processed
-RUN osrm-extract --profile car india-latest.osm.pbf  # Specify the profile
-RUN osrm-partition india-latest.osrm
-RUN osrm-customize india-latest.osrm
+# Set the command to run when the container starts
+CMD ["osrm-routed", "--algorithm", "mld", "/data/india-latest.osrm"]
