@@ -30,3 +30,10 @@ jobs:
         tags: |
           ghcr.io/${{ github.repository }}/osrm-india:latest
         labels: ${{ steps.meta.outputs.labels }}
+    - name: Generate artifact attestation
+      id: attest
+      uses: actions/attest-build-provenance@v1
+      with:
+        subject-name: ghcr.io/${{ github.repository }}/osrm-india
+        subject-digest: ${{ steps.build.outputs.digest }}
+        push-to-registry: true
