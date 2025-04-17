@@ -2,7 +2,7 @@
 FROM ghcr.io/project-osrm/osrm-backend:latest AS builder
 
 # Install curl for downloading map data
-RUN apt-get update && apt-get install -y curl && apt-get clean && rm -rf /var/lib/apt/lists/*
+RUN apk add --no-cache curl
 
 # Set working directory for map data processing
 WORKDIR /data
