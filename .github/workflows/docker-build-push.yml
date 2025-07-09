@@ -12,6 +12,8 @@ jobs:
     strategy:
       matrix:
         region:
+          - name: 'thailand'
+            url: 'https://download.geofabrik.de/asia/thailand-latest.osm.pbf'
           - name: 'central'
             url: 'https://download.geofabrik.de/asia/india/central-zone-latest.osm.pbf'
           - name: 'eastern'
