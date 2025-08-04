@@ -55,7 +55,7 @@ jobs:
         with:
           registry: ghcr.io
           username: ${{ github.actor }}
-          password: ${{ secrets.GHCR_TOKEN }}
+          password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build and push Docker image
         id: build
@@ -68,13 +68,13 @@ jobs:
             OSM_FILE_URL=${{ matrix.region.url }}
             REGION_NAME=${{ matrix.region.name }}
           tags: |
-            ghcr.io/${{ github.repository }}/osrm-india:${{ matrix.region.name }}-latest
+            ghcr.io/${{ github.repository }}/osrm:${{ matrix.region.name }}-latest
           labels: ${{ steps.meta.outputs.labels }}
 
       - name: Generate artifact attestation
         id: attest
         uses: actions/attest-build-provenance@v2
         with:
-          subject-name: ghcr.io/${{ github.repository }}/osrm-india
+          subject-name: ghcr.io/${{ github.repository }}/osrm
           subject-digest: ${{ steps.build.outputs.digest }}
           push-to-registry: true
