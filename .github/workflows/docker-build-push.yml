@@ -40,7 +40,9 @@ jobs:
           - name: 'indonesia-sulawesi'
             url: 'https://download.geofabrik.de/asia/indonesia/sulawesi-latest.osm.pbf'
           - name: 'indonesia-sumatra'
-            url: 'https://download.geofabrik.de/asia/indonesia/sumatra-latest.osm.pbf'               
+            url: 'https://download.geofabrik.de/asia/indonesia/sumatra-latest.osm.pbf'
+          - name: 'zambia'
+            url: 'https://download.geofabrik.de/africa/zambia-latest.osm.pbf'  
     permissions:
       packages: write
       contents: read
