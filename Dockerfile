@@ -2,7 +2,7 @@
 FROM ghcr.io/project-osrm/osrm-backend:latest AS builder
 
 # Install curl for downloading map data
-RUN apk add --no-cache curl
+RUN apk update && apk add --no-cache curl
 
 # Set working directory for map data processing
 WORKDIR /data
