@@ -43,7 +43,7 @@ jobs:
             url: 'https://download.geofabrik.de/asia/indonesia/sumatra-latest.osm.pbf'
           - name: 'zambia'
             url: 'https://download.geofabrik.de/africa/zambia-latest.osm.pbf'  
-          - name: 'drc(usd)'
+          - name: 'drc'
             url: 'https://download.geofabrik.de/africa/congo-democratic-republic-latest.osm.pbf'
     permissions:
       packages: write
