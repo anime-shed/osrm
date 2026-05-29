@@ -47,6 +47,8 @@ jobs:
             url: 'https://download.geofabrik.de/africa/congo-democratic-republic-latest.osm.pbf'
           - name: 'laos'
             url: 'https://download.geofabrik.de/asia/laos-latest.osm.pbf'
+          - name: 'tanzania'
+            url: 'https://download.geofabrik.de/africa/tanzania-latest.osm.pbf'
     permissions:
       packages: write
       contents: read
