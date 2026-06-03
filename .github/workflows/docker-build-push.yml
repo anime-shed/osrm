@@ -49,6 +49,8 @@ jobs:
             url: 'https://download.geofabrik.de/asia/laos-latest.osm.pbf'
           - name: 'tanzania'
             url: 'https://download.geofabrik.de/africa/tanzania-latest.osm.pbf'
+          - name: 'vietnam'
+            url: 'https://download.geofabrik.de/asia/vietnam-latest.osm.pbf'
     permissions:
       packages: write
       contents: read
