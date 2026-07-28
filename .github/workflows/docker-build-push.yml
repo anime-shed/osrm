@@ -53,6 +53,12 @@ jobs:
             url: 'https://download.geofabrik.de/asia/vietnam-latest.osm.pbf'
           - name: 'philippines'
             url: 'https://download.geofabrik.de/asia/philippines-latest.osm.pbf'
+          - name: 'malaysia'
+            url: 'https://download.geofabrik.de/asia/malaysia-singapore-brunei-latest.osm.pbf'
+          - name: 'singapore'
+            url: 'https://download.geofabrik.de/asia/malaysia-singapore-brunei-latest.osm.pbf'
+          - name: 'brunei'
+            url: 'https://download.geofabrik.de/asia/malaysia-singapore-brunei-latest.osm.pbf'
     permissions:
       packages: write
       contents: read
